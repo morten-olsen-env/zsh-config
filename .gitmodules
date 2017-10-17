@@ -1,0 +1,12 @@
+[submodule "oh-my-zsh"]
+	path = oh-my-zsh
+	url = https://github.com/robbyrussell/oh-my-zsh
+[submodule "custom/themes/lambda-gitster"]
+	path = custom/themes/lambda-gitster
+	url = https://github.com/ergenekonyigit/lambda-gitster
+[submodule "custom/themes/omz-haribo-theme"]
+	path = custom/themes/omz-haribo-theme
+	url = https://github.com/haribo/omz-haribo-theme
+[submodule "nvm"]
+	path = nvm
+	url = https://github.com/creationix/nvm.git

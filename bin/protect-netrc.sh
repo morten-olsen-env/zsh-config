@@ -2,6 +2,13 @@
 FINGERPRINT=8B9DF6F4E233D7CC5003AC49726A325560E4198D
 
 if [ -f $HOME/.netrc ]; then
+  if [ -f $HOME/.netrc.gpg]; then
+    read -p "A .netrc.gpg already exists, do you wish to override it? [y/N]" yn
+    case $yn in
+      [Yy]* );;
+      * ) echo "...Exiting"; exit 1;;
+    esac
+  fi
   if gpg -e -r $FINGERPRINT $HOME/.netrc ; then
     rm -f $HOME/.netrc
     chmod 600 $HOME/.netrc

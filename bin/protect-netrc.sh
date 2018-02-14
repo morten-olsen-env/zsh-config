@@ -11,7 +11,7 @@ if [ -f $HOME/.netrc ]; then
   fi
   if gpg -e -r $FINGERPRINT $HOME/.netrc ; then
     rm -f $HOME/.netrc
-    chmod 600 $HOME/.netrc
+    chmod 600 $HOME/.netrc.gpg
   else
     echo "Could not encrypt the .netrc"
   fi

@@ -13,6 +13,10 @@ if [ ! $CHECK_ZSH_INSTALLED -ge 1 ]; then
 fi
 unset CHECK_ZSH_INSTALLED
 
+if [ ! -d ~/.zsh ]; then
+  ./install-android.sh
+fi
+
 echo 'installing'
 rm -f ~/.zshrc
 rm -f -R ~/.zsh

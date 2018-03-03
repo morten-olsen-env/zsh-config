@@ -1,6 +1,6 @@
 #!/usr/bin/env sh
 
-export INSTALLPATH="$HOME/env-configs/zsh"
+export INSTALLPATH="$HOME/.env-configs/zsh"
 
 if [ -d $HOME/env-configs/zsh ]; then
   read -p "zsh has already been checked out at the location, do you want to remove it? [y/N]" yn

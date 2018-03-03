@@ -1,3 +1,4 @@
+#!/bin/sh
 INSTALLPATH="~/env-configs/zsh"
 
 if [ -d ~/env-configs/zsh ]; then

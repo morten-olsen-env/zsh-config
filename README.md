@@ -1,3 +1,3 @@
 # ZSH-config
 
-setup ``
+setup `bash <(curl -sL https://goo.gl/ncPb8x)`

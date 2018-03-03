@@ -30,7 +30,7 @@ if [ ! -f $HOME/.zshrc ] && [ ! -d $HOME/.zsh ]; then
     git submodule update
     git submodule update --init --recursive
     cd $INITDIR
-    chsh -s $(grep /zsh$ /etc/shells | tail -1)
+    # chsh -s $(grep /zsh$ /etc/shells | tail -1)
     exit 0
   else
     echo "could not install the new config"

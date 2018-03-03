@@ -1,3 +1,4 @@
+INITDIR=$PWD
 DIR="$( cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd )"
 
 if [ -f ~/.zshrc ] || [ -d ~/.zsh ]; then
@@ -28,9 +29,11 @@ if [ ! -f ~/.zshrc ] && [ ! -d ~/.zsh ]; then
   if [ -f ~/.zshrc ] && [ -d ~/.zsh ]; then
     echo "zsh config installed"
     echo "setting up modules"
+    cd $DIR
     git submodule init
     git submodule update
     git submodule update --init --recursive
+    cd $INITDIR
     chsh -s $(grep /zsh$ /etc/shells | tail -1)
     exit 0
   else

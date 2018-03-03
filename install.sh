@@ -1,3 +1,5 @@
+DIR="$( cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd )"
+
 if [ -f ~/.zshrc ] || [ -d ~/.zsh ]; then
   read -p "a zsh config is already installed, do you wish to override it? [y/N]" yn
   case $yn in
@@ -21,8 +23,8 @@ echo 'installing'
 rm -f ~/.zshrc
 rm -f -R ~/.zsh
 if [ ! -f ~/.zshrc ] && [ ! -d ~/.zsh ]; then
-  ln -s $(pwd)/zshrc ~/.zshrc
-  ln -s $(pwd)/ ~/.zsh
+  ln -s $DIR/zshrc ~/.zshrc
+  ln -s $DIR/ ~/.zsh
   if [ -f ~/.zshrc ] && [ -d ~/.zsh ]; then
     echo "zsh config installed"
     echo "setting up modules"

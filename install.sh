@@ -1,7 +1,7 @@
 INITDIR=$PWD
 DIR="$( cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd )"
 
-if [ -f ~/.zshrc ] || [ -d ~/.zsh ]; then
+if [ -f $HOME/.zshrc ] || [ -d $HOME/.zsh ]; then
   read -p "a zsh config is already installed, do you wish to override it? [y/N]" yn
   case $yn in
     [Yy]* );;
@@ -16,17 +16,17 @@ if [ ! $CHECK_ZSH_INSTALLED -ge 1 ]; then
 fi
 unset CHECK_ZSH_INSTALLED
 
-if [ ! -d ~/.zsh ]; then
+if [ ! -d $HOME/.zsh ]; then
   ./install-android.sh
 fi
 
 echo 'installing'
-rm -f ~/.zshrc
-rm -f -R ~/.zsh
-if [ ! -f ~/.zshrc ] && [ ! -d ~/.zsh ]; then
-  ln -s $DIR/zshrc ~/.zshrc
-  ln -s $DIR/ ~/.zsh
-  if [ -f ~/.zshrc ] && [ -d ~/.zsh ]; then
+rm -f $HOME/.zshrc
+rm -f -R $HOME/.zsh
+if [ ! -f $HOME/.zshrc ] && [ ! -d $HOME/.zsh ]; then
+  ln -s $DIR/zshrc $HOME/.zshrc
+  ln -s $DIR/ $HOME/.zsh
+  if [ -f $HOME/.zshrc ] && [ -d $HOME/.zsh ]; then
     echo "zsh config installed"
     echo "setting up modules"
     cd $DIR

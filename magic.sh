@@ -16,4 +16,4 @@ mkdir -p $INSTALLPATH
 git clone https://github.com/morten-olsen-env/zsh-config $INSTALLPATH
 
 echo "Installing"
-sh $INSTALLPATH/install.sh
+$INSTALLPATH/install.sh
